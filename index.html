@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather Forecast App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Background videos for dark and light modes -->
+  <video id="bg-video-light" class="active" autoplay muted loop>
+    <source src="./assets/bgvdo.mp4" type="video/mp4" />
+  </video>
+  <video id="bg-video-dark" autoplay muted loop>
+    <source src="./assets/darkvdo.mp4" type="video/mp4" />
+  </video>
+
+  <!-- Main container -->
+  <div class="container">
+    <header>
+      <h1>Weather Forecast</h1>
+      <!-- Mode buttons -->
+      <div class="mode-buttons">
+        <button id="lightMode_btn">Light Mode</button>
+        <button id="darkMode_btn">Dark Mode</button>
+      </div>
+    </header>
+
+    <!-- Search bar -->
+    <div class="search-bar">
+      <input type="text" id="search_input" placeholder="Enter city name" />
+      <button id="search_btn">Search</button>
+    </div>
+
+    <!-- Current weather card -->
+    <div id="Card_data" class="card">
+      <h2 class="card-title"></h2>
+      <img id="weatherImg" src="" alt="Weather Icon" class="weather-icon">
+      <p class="temp_display"></p>
+      <p class="card-text"></p>
+    </div>
+
+    <!-- Temperature unit buttons -->
+    <div class="unit-buttons">
+      <button id="degree_celsius">°C</button>
+      <button id="fahreinheit">°F</button>
+    </div>
+
+    <button id="current_location_btn" style="border: 2px solid rgb(162, 223, 223); background-color:aliceblue; border-radius: 10px; padding: 10px; box-shadow: 0 1px 3px rgb(162, 223, 223);">Get Current Location Weather</button>
+
+
+    <!-- Future weather forecast section -->
+    <div id="Future_data">
+      <h3>Upcoming Forecast</h3>
+      <div class="row" id="forecast"></div>
+    </div>
+  </div>
+
+  <!-- Link to external JS file -->
+  <script src="index.js"></script>
+</body>
+</html>
